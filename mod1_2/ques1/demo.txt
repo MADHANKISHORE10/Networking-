@@ -1,0 +1,25 @@
+Please make sure you have the correct access rights
+and the repository exists.
+demo@DESKTOP-GTHFG7Q:~/nw$ git remote add origin https://github.com/MADHANKISHORE10/networking-.git
+demo@DESKTOP-GTHFG7Q:~/nw$ git remote -v
+origin  https://github.com/MADHANKISHORE10/networking-.git (fetch)
+origin  https://github.com/MADHANKISHORE10/networking-.git (push)
+demo@DESKTOP-GTHFG7Q:~/nw$ git push -u origin main
+Username for 'https://github.com': MADHANKISHORE10
+Password for 'https://MADHANKISHORE10@github.com':
+remote: Permission to MADHANKISHORE10/networking-.git denied to MADHANKISHORE10.
+fatal: unable to access 'https://github.com/MADHANKISHORE10/networking-.git/': The requested URL returned error: 403
+demo@DESKTOP-GTHFG7Q:~/nw$ git push -u origin main
+Username for 'https://github.com': MADHANKISHORE10
+Password for 'https://MADHANKISHORE10@github.com':
+remote: Permission to MADHANKISHORE10/networking-.git denied to MADHANKISHORE10.
+fatal: unable to access 'https://github.com/MADHANKISHORE10/networking-.git/': The requested URL returned error: 403
+demo@DESKTOP-GTHFG7Q:~/nw$ git remote add origin https://github.com/MADHANKISHORE10/Networking-.git
+error: remote origin already exists.
+demo@DESKTOP-GTHFG7Q:~/nw$ cd mod1_2/ques1/
+demo@DESKTOP-GTHFG7Q:~/nw/mod1_2/ques1$ cat output1.txt
+scp -r nw/mod1_2/ques1/source/ demo@localhost:/tmp/
+demo@localhost's password:
+file1.txt                                                                             100%    6     6.3KB/s   00:00
+file2.txt                                                                             100%    3     3.2KB/s   00:00
+file3.txt 
