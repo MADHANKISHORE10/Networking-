@@ -1,0 +1,52 @@
+demo@DESKTOP-GTHFG7Q:~/nw/mod1_2/ques2$ ssh localhost
+demo@localhost's password:
+Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.6.87.2-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed Mar  4 11:07:35 UTC 2026
+
+  System load:  0.0                 Processes:             37
+  Usage of /:   0.2% of 1006.85GB   Users logged in:       1
+  Memory usage: 4%                  IPv4 address for eth0: 172.19.195.124
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+Last login: Wed Mar  4 08:16:24 2026 from 127.0.0.1
+demo@DESKTOP-GTHFG7Q:~$ ls
+ftp_upload  nw  output.txt  snap
+demo@DESKTOP-GTHFG7Q:~$ sftp demo@localhost
+demo@localhost's password:
+Connected to localhost.
+sftp> cd ftp_upload/
+sftp> pwd
+Remote working directory: /home/demo/ftp_upload
+sftp> lpwd
+Local working directory: /home/demo
+sftp> lcd
+sftp> lcd  /home/demo/nw/mod1_2/q
+ques1/  ques2/
+sftp> lcd  /home/demo/nw/mod1_2/ques1/source/
+sftp> put file2.txt
+Uploading file2.txt to /home/demo/ftp_upload/file2.txt
+file2.txt                                                                             100%    3     1.0KB/s   00:00
+sftp> ls
+file1.txt   file2.txt
+sftp> get file
+file1.txt   file2.txt
+sftp> get file1.txt
+Fetching /home/demo/ftp_upload/file1.txt to file1.txt
+file1.txt                                                                             100%    6     1.9KB/s   00:00
+sftp> cat file1.txt
+Invalid command.
+sftp> get file2.txt
+Fetching /home/demo/ftp_upload/file2.txt to file2.txt
+file2.txt                                                                             100%    3     1.3KB/s   00:00
+sftp> close
+Invalid command.
+sftp> exit

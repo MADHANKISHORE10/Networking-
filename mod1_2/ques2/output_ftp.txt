@@ -1,0 +1,50 @@
+ftp localhost
+Connected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:demo): demo
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> pwd
+Remote directory: /
+ftp> cd ftp_upload
+250 Directory successfully changed.
+ftp> lpwd
+Local directory: /home/demo
+ftp> lcd /home/demo/
+.bash_history                   .motd_shown                     nw
+.bash_logout                    .profile                        output.txt
+.bashrc                         .ssh                            snap
+.cache                          .sudo_as_admin_successful
+.local                          ftp_upload
+ftp> lcd /home/demo/nw/mod1_2/ques1/source/
+Local directory now: /home/demo/nw/mod1_2/ques1/source
+ftp> put file1.txt
+local: file1.txt remote: file1.txt
+229 Entering Extended Passive Mode (|||25287|)
+150 Ok to send data.
+100% |***************************************************************************|     6       33.67 KiB/s    00:00 ETA
+226 Transfer complete.
+6 bytes sent in 00:00 (6.70 KiB/s)
+ftp> ls
+229 Entering Extended Passive Mode (|||33786|)
+150 Here comes the directory listing.
+-rw-------    1 1000     1000            6 Mar 04 11:02 file1.txt
+226 Directory send OK.
+ftp> get file1.txt
+local: file1.txt remote: file1.txt
+229 Entering Extended Passive Mode (|||35440|)
+150 Opening BINARY mode data connection for file1.txt (6 bytes).
+100% |***************************************************************************|     6       46.87 KiB/s    00:00 ETA
+226 Transfer complete.
+6 bytes received in 00:00 (5.79 KiB/s)
+ftp> ls
+229 Entering Extended Passive Mode (|||5427|)
+150 Here comes the directory listing.
+-rw-------    1 1000     1000            6 Mar 04 11:02 file1.txt
+226 Directory send OK.
+ftp> close
+221 Goodbye.
+ftp> bye
