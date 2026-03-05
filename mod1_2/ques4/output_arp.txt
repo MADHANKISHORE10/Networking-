@@ -1,0 +1,5 @@
+Address                  HWtype  HWaddress           Flags Mask            Iface
+DESKTOP-GTHFG7Q.mshome.  ether   00:15:5d:52:7b:c2   C                     eth0
+DESKTOP-GTHFG7Q.mshome.net (172.19.192.1) at 00:15:5d:52:7b:c2 [ether] on eth0
+Address                  HWtype  HWaddress           Flags Mask            Iface
+172.19.192.1             ether   00:15:5d:52:7b:c2   C                     eth0

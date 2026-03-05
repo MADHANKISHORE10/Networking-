@@ -1,0 +1,2 @@
+default via 172.19.192.1 dev eth0 proto kernel 
+172.19.192.0/20 dev eth0 proto kernel scope link src 172.19.195.124 
