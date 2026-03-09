@@ -1,0 +1,6 @@
+ Tool        Connection Method 
+--------------------------------              
+ VNC         IP-based connection             
+ AnyDesk     ID-based connection             
+ TeamViewer  ID + password                   
+ RDP         Windows remote desktop protocol 

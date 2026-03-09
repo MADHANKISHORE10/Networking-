@@ -1,0 +1,5 @@
+Client sends DHCP Discover
+Server sends DHCP Offer
+Client sends DHCP Request
+Server sends DHCP ACK
+A DHCP server automatically assigns network configuration to devices when they join a network it is done by DORA process

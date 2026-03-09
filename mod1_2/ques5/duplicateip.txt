@@ -1,0 +1,6 @@
+ip address conflict 
+arp confusion
+intermittent connectivity
+arp table instability
+service randomly failing
+logs reporting duplicate address
