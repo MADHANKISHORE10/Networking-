@@ -1,0 +1,8 @@
+The Linux kernel provides robust support for Ethernet devices through its networking subsystem. Network interfaces in Linux are represented as devices (e.g., eth0) and are managed using the kernel’s net_device structure. Device drivers handle the interaction between hardware and the kernel, enabling packet transmission and reception.
+
+When an Ethernet frame is received, it is processed by the kernel’s network stack, starting from the device driver and moving up through layers such as the data link layer and network layer. The kernel uses protocols like ARP for address resolution and IP for routing packets.
+
+The kernel also manages interface configuration, including IP addressing and MAC addressing, through tools like ip and ifconfig. It supports features such as packet queuing, buffering, and error handling to ensure efficient communication.
+
+According to kernel.org documentation, the Linux networking stack is modular and extensible, allowing support for various protocols and hardware devices, making it highly flexible for Ethernet-based communication.
+

@@ -1,0 +1,3 @@
+Ethernet frames were captured using Wireshark during ping communication between 10.10.10.1 and 10.10.10.2. The Ethernet II header showed the source and destination MAC addresses, with ARP using broadcast and ICMP using unicast addressing. The EtherType field identified protocols such as ARP (0x0806) and IPv4 (0x0800).
+
+The payload contained ARP and ICMP data, while padding ensured the minimum frame size. The data is in the icmp.

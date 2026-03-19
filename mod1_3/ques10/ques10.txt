@@ -1,0 +1,77 @@
+madhan@MADHXNHP:~$ sudo ip link add br0 type bridge
+[sudo] password for madhan:
+madhan@MADHXNHP:~$ sudo ip link add veth0 type veth peer name veth1
+madhan@MADHXNHP:~$ sudo ip link set veth0 master br0
+madhan@MADHXNHP:~$ sudo ip link set veth1 master br0
+madhan@MADHXNHP:~$ sudo ip link set br0 up
+madhan@MADHXNHP:~$ sudo ip link set veth0 up
+madhan@MADHXNHP:~$ sudo ip link set veth1 up
+madhan@MADHXNHP:~$ sudo ip addr add 10.10.10.1/24 dev veth0
+madhan@MADHXNHP:~$ sudo ip addr add 10.10.10.2/24 dev veth1
+madhan@MADHXNHP:~$ ping -c 5 10.10.10.2
+PING 10.10.10.2 (10.10.10.2) 56(84) bytes of data.
+64 bytes from 10.10.10.2: icmp_seq=1 ttl=64 time=0.699 ms
+64 bytes from 10.10.10.2: icmp_seq=2 ttl=64 time=0.027 ms
+64 bytes from 10.10.10.2: icmp_seq=3 ttl=64 time=0.031 ms
+64 bytes from 10.10.10.2: icmp_seq=4 ttl=64 time=0.027 ms
+64 bytes from 10.10.10.2: icmp_seq=5 ttl=64 time=0.033 ms
+
+--- 10.10.10.2 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4170ms
+rtt min/avg/max/mdev = 0.027/0.163/0.699/0.267 ms
+madhan@MADHXNHP:~$ bridge fdb show
+33:33:00:00:00:01 dev eth0 self permanent
+01:00:5e:00:00:01 dev eth0 self permanent
+33:33:ff:8f:8d:89 dev eth0 self permanent
+33:33:00:00:00:01 dev br0 self permanent
+01:00:5e:00:00:6a dev br0 self permanent
+33:33:00:00:00:6a dev br0 self permanent
+01:00:5e:00:00:01 dev br0 self permanent
+33:33:ff:21:f4:7a dev br0 self permanent
+ba:cd:f5:21:f4:7a dev br0 vlan 1 master br0 permanent
+ba:cd:f5:21:f4:7a dev br0 master br0 permanent
+8a:44:8b:38:42:32 dev veth1 vlan 1 master br0 permanent
+8a:44:8b:38:42:32 dev veth1 master br0 permanent
+33:33:00:00:00:01 dev veth1 self permanent
+01:00:5e:00:00:01 dev veth1 self permanent
+33:33:ff:38:42:32 dev veth1 self permanent
+f2:16:06:7e:b1:01 dev veth0 vlan 1 master br0 permanent
+f2:16:06:7e:b1:01 dev veth0 master br0 permanent
+33:33:00:00:00:01 dev veth0 self permanent
+01:00:5e:00:00:01 dev veth0 self permanent
+33:33:ff:7e:b1:01 dev veth0 self permanent
+madhan@MADHXNHP:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet 10.255.255.254/32 brd 10.255.255.254 scope global lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:8f:8d:89 brd ff:ff:ff:ff:ff:ff
+    inet 172.29.183.103/20 brd 172.29.191.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:fe8f:8d89/64 scope link
+       valid_lft forever preferred_lft forever
+5: dummy0: <BROADCAST,NOARP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 00:11:22:33:44:55 brd ff:ff:ff:ff:ff:ff
+    inet 10.10.10.1/24 scope global dummy0
+       valid_lft forever preferred_lft forever
+6: br0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether ba:cd:f5:21:f4:7a brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::b8cd:f5ff:fe21:f47a/64 scope link
+       valid_lft forever preferred_lft forever
+7: veth1@veth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br0 state UP group default qlen 1000
+    link/ether 8a:44:8b:38:42:32 brd ff:ff:ff:ff:ff:ff
+    inet 10.10.10.2/24 scope global veth1
+       valid_lft forever preferred_lft forever
+    inet6 fe80::8844:8bff:fe38:4232/64 scope link
+       valid_lft forever preferred_lft forever
+8: veth0@veth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br0 state UP group default qlen 1000
+    link/ether f2:16:06:7e:b1:01 brd ff:ff:ff:ff:ff:ff
+    inet 10.10.10.1/24 scope global veth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::f016:6ff:fe7e:b101/64 scope link
+       valid_lft forever preferred_lft forever

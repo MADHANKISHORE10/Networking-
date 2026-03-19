@@ -1,0 +1,1 @@
+A network with multiple PCs and switches was simulated in Packet Tracer. Connectivity was verified using the ping command, which showed successful communication after initial ARP resolution. The tracert command indicated a single-hop path within the same network. This demonstrates basic Ethernet communication and troubleshooting using ping and traceroute.

@@ -1,0 +1,18 @@
+madhan@MADHXNHP:~$ traceroute 8.8.8.8
+traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 60 byte packets
+ 1  MADHXNHP.mshome.net (172.29.176.1)  0.695 ms  0.638 ms  0.525 ms
+ 2  10.84.18.221 (10.84.18.221)  25.152 ms  25.128 ms  25.111 ms
+ 3  * * *
+ 4  * * *
+ 5  * * *
+ 6  192.168.227.98 (192.168.227.98)  135.361 ms  129.893 ms  129.869 ms
+ 7  192.168.115.238 (192.168.115.238)  129.832 ms  84.238 ms 172.28.15.240 (172.28.15.240)  84.182 ms
+ 8  * * *
+ 9  * * *
+10  * * *
+11  * * *
+12  dns.google (8.8.8.8)  93.696 ms  93.679 ms  93.668 ms
+madhan@MADHXNHP:~$
+
+
+Traceroute was used to identify the path taken by packets between devices. When ping failed, traceroute helped determine the exact point where packets were dropped by showing incomplete or missing hop responses.

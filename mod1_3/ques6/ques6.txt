@@ -1,0 +1,1 @@
+The experiment shows that successful communication between devices depends on correct IP configuration. If ping fails, verifying and correcting IP settings using ifconfig/ip helps restore connectivity.

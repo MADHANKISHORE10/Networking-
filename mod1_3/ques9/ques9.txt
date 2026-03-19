@@ -1,0 +1,7 @@
+A basic LAN interface in Linux can be configured using the ip command from the iproute2 package. First, the available network interfaces are identified using ip addr.
+
+The interface is then assigned a static IP address using the command ip addr add 10.10.10.1/24 dev dummy0. After assigning the IP, the interface is enabled using ip link set dummy0 up.
+
+The configuration can be verified using ip addr, which displays the assigned IP address and interface status. Connectivity can then be tested using the ping command to ensure proper communication within the network.
+
+This method provides a simple and efficient way to configure network interfaces as supported by the Linux kernel networking subsystem.

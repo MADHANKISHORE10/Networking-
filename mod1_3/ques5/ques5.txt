@@ -1,0 +1,3 @@
+In this setup, a simple LAN was created using two PCs connected through a switch. Both devices were assigned IP addresses within the same subnet, enabling direct communication.
+
+A ping was performed from PC5 to PC6 (192.168.1.4), and successful replies were received with 0% packet loss, confirming proper connectivity. The switch forwarded Ethernet frames between the devices based on MAC address learning.

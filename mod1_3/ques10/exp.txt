@@ -1,0 +1,3 @@
+The bridge interface br0 also has its own MAC address, which represents the identity of the switch. The most important entries are those associated with the virtual interfaces veth0 and veth1. These entries show the MAC addresses of the connected devices and the corresponding interfaces through which they are reachable.
+
+Overall, this output demonstrates that the Linux bridge is functioning like a switch by maintaining a MAC address table that maps device MAC addresses to specific interfaces, enabling efficient frame forwarding within the network.

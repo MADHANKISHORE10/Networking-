@@ -1,0 +1,7 @@
+A network with three PCs connected to a switch was created in GNS3. The IP addresses assigned were PC1 – 192.168.1.1, PC2 – 192.168.1.2, and PC3 – 192.168.1.3.
+
+A ping was performed from PC1 to PC2, and packets were captured using Wireshark. Initially, an ARP request was broadcast to find the MAC address of PC2, followed by an ARP reply.
+
+After ARP resolution, ICMP packets were exchanged using unicast communication. The Ethernet frames showed source and destination MAC addresses.
+
+The switch dynamically learned MAC addresses and updated its MAC table, allowing efficient forwarding in subsequent transmissions.
