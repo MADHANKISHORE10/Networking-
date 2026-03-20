@@ -1,0 +1,13 @@
+The given IP addresses belong to different classes based on their first octet.
+
+10.1.1.1 belongs to Class A, because Class A ranges from 1 to 126. The default subnet mask for Class A is 255.0.0.0. The IP range for Class A is 1.0.0.0 to 126.255.255.255.
+
+172.16.5.10 belongs to Class B, because Class B ranges from 128 to 191. The default subnet mask for Class B is 255.255.0.0. The IP range for Class B is 128.0.0.0 to 191.255.255.255.
+
+192.168.1.5 belongs to Class C, because Class C ranges from 192 to 223. The default subnet mask for Class C is 255.255.255.0. The IP range for Class C is 192.0.0.0 to 223.255.255.255.
+
+
+ Class  First Octet Range 
+ A      1 – 126           
+ B      128 – 191         
+ C      192 – 223         

@@ -1,0 +1,1 @@
+Static IP addresses were configured on virtual interfaces using the Linux ip command. Two dummy interfaces were created and assigned IP addresses within the same subnet. The interfaces were brought up and verified using the ip addr command. Connectivity between the interfaces was successfully tested using the ping command.

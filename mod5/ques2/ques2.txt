@@ -1,0 +1,5 @@
+In a network with PC1 (10.10.10.1), PC2 (10.10.10.2), and an attacker PC3 (10.10.10.100), PC1 initially sends an ARP request to find the MAC address of PC2. PC2 replies with its MAC address, and communication proceeds normally.
+
+During an ARP spoofing attack, PC3 sends a fake ARP reply claiming that 10.10.10.2 is associated with its own MAC address. PC1 updates its ARP table with this incorrect mapping and starts sending data to the attacker instead of PC2.
+
+As a result, the attacker intercepts the traffic, creating a man-in-the-middle scenario due to the lack of authentication in ARP.

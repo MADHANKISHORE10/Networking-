@@ -1,0 +1,4 @@
+ARP packets were captured using Wireshark during communication between two devices. The ARP request was broadcast to all devices, containing the sender’s IP and MAC address, while the target MAC address was unknown. The ARP reply was sent as a unicast message, providing the requested MAC address.
+
+The sender’s IP address identifies the device at the network layer, while the sender’s MAC address identifies it at the data link layer. This mapping allows devices to communicate within a local network
+ARP resolves IP addresses to MAC addresses using broadcast requests and unicast replies.
