@@ -1,0 +1,9 @@
+The ARP process was analyzed using Wireshark by observing ARP request and reply packets. The ARP request is sent as a broadcast to discover the MAC address corresponding to a specific IP address. The device with the matching IP responds with an ARP reply, which is sent as a unicast and contains its MAC address.
+
+In the captured packet, the ARP reply shows the sender IP (10.84.18.252) mapped to its MAC address, which is then used by the target device (10.84.18.221) for communication. This demonstrates how ARP enables IP-to-MAC address resolution in a local network.
+
+importance of packet forwarding
+
+ARP is essential for packet forwarding in a local network because it maps an IP address to the corresponding MAC address. When a device wants to send a packet, it must know the destination MAC address to place it in the Ethernet frame. If the MAC address is unknown, ARP is used to obtain it.
+
+Without ARP, devices cannot deliver packets at the data link layer, even if the IP address is known. Thus, ARP ensures that packets are correctly forwarded from one device to another within the same network.

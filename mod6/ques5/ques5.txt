@@ -1,0 +1,3 @@
+The NAT translation table shows that internal devices 192.168.1.2 and 192.168.1.3 are communicating with the external IP 8.8.8.8. Their private IP addresses are translated to a single public IP 10.10.10.1 using different port numbers.
+
+For example, traffic from 192.168.1.3 is translated as 10.10.10.1:1024, while traffic from 192.168.1.2 is translated as 10.10.10.1:1. This allows both devices to share the same public IP while maintaining separate sessions.

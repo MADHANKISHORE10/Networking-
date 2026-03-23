@@ -1,0 +1,1 @@
+Static routes were successfully configured between the two routers, enabling communication between different subnets (192.168.1.0/24 and 192.168.2.0/24). The ping results confirmed successful connectivity, and the traceroute output showed that packets were forwarded through Router0 (192.168.1.1) and Router1 (10.10.10.2) before reaching the destination (192.168.2.2).
