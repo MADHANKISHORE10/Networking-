@@ -1,0 +1,1 @@
+During this task, I configured an extended ACL to block specific applications like HTTP and FTP while allowing other traffic such as ICMP. I tested the configuration and observed behaviors like connection reset and timeout, which confirmed that the ACL was effectively filtering traffic. This helped me understand application-level control and ACL-based network security.

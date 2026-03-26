@@ -1,0 +1,1 @@
+During this task, I configured and tested an extended ACL to control network traffic based on protocol and port numbers. I verified the configuration by allowing ICMP and HTTP while blocking Telnet, and validated it using ping tests and ACL hit counts. This helped me understand traffic filtering and basic network security.

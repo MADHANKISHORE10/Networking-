@@ -1,0 +1,2 @@
+
+During this task, I configured a management VLAN and enabled SSH on switches for secure remote access. I learned how to assign IP addresses using SVI, generate RSA keys, and verify connectivity between devices. This helped me understand remote device management and secure access in a network.

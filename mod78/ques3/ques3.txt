@@ -1,0 +1,19 @@
+PS C:\Users\MADHAN> tracert google.com
+
+Tracing route to google.com [172.217.24.206]
+over a maximum of 30 hops:
+
+  1     6 ms     3 ms     4 ms  10.67.100.38
+  2   295 ms   198 ms   200 ms  192.168.29.10
+  3    86 ms    24 ms    22 ms  192.168.28.93
+  4    86 ms    21 ms    24 ms  192.168.31.22
+  5    27 ms    23 ms    23 ms  192.168.31.33
+  6     *        *        *     Request timed out.
+  7    69 ms    22 ms    23 ms  nsg-static-113.206.71.182.airtel.in [182.71.206.113]
+  8    25 ms    26 ms    28 ms  116.119.68.108
+  9    68 ms    23 ms    32 ms  72.14.205.196
+ 10    60 ms    27 ms    33 ms  142.251.227.211
+ 11    56 ms    26 ms    22 ms  209.85.247.229
+ 12    57 ms    26 ms    34 ms  hkg12s13-in-f14.1e100.net [172.217.24.206]
+
+Trace complete

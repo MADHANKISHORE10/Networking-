@@ -1,0 +1,2 @@
+
+During this assignment, I used Wireshark to capture and analyze DNS, TCP, and UDP traffic. I understood packet structure, headers, and flow of communication, including TCP flags and the three-way handshake. This helped me gain practical knowledge of how network protocols operate at the packet level.

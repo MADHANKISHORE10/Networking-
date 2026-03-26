@@ -1,0 +1,1 @@
+During this task, I configured inter-VLAN routing using router-on-a-stick by creating VLANs, enabling trunking, and using encapsulation dot1Q on router subinterfaces. I learned how VLAN tagging works and how the router identifies and routes traffic between different VLANs.

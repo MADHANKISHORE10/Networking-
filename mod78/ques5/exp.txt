@@ -1,0 +1,1 @@
+During this task, I configured and modified the native VLAN on trunk ports and created a mismatch scenario. I observed how mismatched native VLANs cause communication issues and analyzed it using show commands. I then corrected the configuration, which helped me understand VLAN tagging and troubleshooting in switched networks.

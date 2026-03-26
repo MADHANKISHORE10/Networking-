@@ -1,0 +1,1 @@
+During this task, I configured a standard ACL to permit traffic from a specific network and block all other sources. I tested the configuration by verifying successful communication from allowed devices and failure from unauthorized devices. This helped me understand source-based filtering and ACL behavior in network security.

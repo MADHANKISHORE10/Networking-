@@ -1,0 +1,1 @@
+During this task, I configured static NAT to map a private IP address to a public IP. I understood how the router translates source and destination addresses, enabling communication between internal and external networks.

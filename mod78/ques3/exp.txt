@@ -1,0 +1,1 @@
+Tracert shows the hop-by-hop path to a destination, including latency at each hop, helping identify network delays, routing paths, and possible failures.

@@ -1,0 +1,1 @@
+During this task, I configured VLANs and trunk ports between switches and tested connectivity between different VLANs. I observed that devices in different VLANs cannot communicate without inter-VLAN routing. This helped me understand VLAN isolation and trunking concepts.
